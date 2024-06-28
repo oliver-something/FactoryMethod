@@ -57,8 +57,8 @@ int main() {
     std::unique_ptr<Product> product;
 
     product = creator->create(ProductId::FIRST_PRODUCT);
-    product->Print();
+    if(product) product->Print();
     product = creator->create(ProductId::SECOND_PRODUCT);
-    product->Print();
+    if (product) product->Print();
     return 0;
 }
